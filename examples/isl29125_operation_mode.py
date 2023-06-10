@@ -2,7 +2,6 @@
 #
 # SPDX-License-Identifier: MIT
 
-import time
 from machine import Pin, I2C
 from micropython_isl29125 import isl29125
 

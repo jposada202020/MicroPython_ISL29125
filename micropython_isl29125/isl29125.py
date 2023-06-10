@@ -16,11 +16,6 @@ MicroPython Driver for the Intersil ISL29125 Color Sensor
 from micropython import const
 from micropython_isl29125.i2c_helpers import CBits, RegisterStruct
 
-try:
-    from typing import Tuple
-except ImportError:
-    pass
-
 
 __version__ = "0.0.0+auto.0"
 __repo__ = "https://github.com/jposada202020/MicroPython_ISL29125.git"
@@ -442,6 +437,14 @@ class ISL29125:
 
     @property
     def low_threshold(self) -> int:
+        """
+        The interrupt threshold level is a 16-bit number (Low Threshold-1 and Low Threshold-2).
+        The lower interrupt threshold registers are used to set the lower trigger point for
+        interrupt generation. If the ALS value crosses below or is equal to the lower
+        threshold, an interrupt is asserted on the interrupt pin (LOW) and the interrupt
+        status bit (HIGH).
+
+        """
         return self._low_threshold
 
     @low_threshold.setter
