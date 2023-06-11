@@ -21,7 +21,19 @@ Introduction
 
 MicroPython Driver for the Intersil ISL29125 Color Sensor
 
+Installing with mip
+====================
+To install using mpremote
 
+.. code-block:: shell
+
+    mpremote mip install --target=/micropython_isl29125 github:jposada202020/MicroPython_ISL29125
+
+To install directly using a WIFI capable board
+
+.. code-block:: shell
+
+    mip install --target=/micropython_isl29125 github:jposada202020/MicroPython_ISL29125
 
 Installing from PyPI
 =====================
