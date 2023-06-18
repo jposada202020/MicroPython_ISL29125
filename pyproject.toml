@@ -41,7 +41,7 @@ classifiers = [
 dynamic = ["dependencies", "optional-dependencies"]
 
 [tool.setuptools]
-py-modules = ["isl29125"]
+packages = ["micropython_isl29125"]
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
