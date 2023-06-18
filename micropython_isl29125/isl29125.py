@@ -74,7 +74,7 @@ class ISL29125:
     """Driver for the ISL29125 Sensor connected over I2C.
 
     :param ~machine.I2C i2c: The I2C bus the ISL29125 is connected to.
-    :param int address: The I2C device address. Defaults to :const:`0x69`
+    :param int address: The I2C device address. Defaults to :const:`0x44`
 
     :raises RuntimeError: if the sensor is not found
 
@@ -86,7 +86,7 @@ class ISL29125:
     .. code-block:: python
 
         from machine import Pin, I2C
-        import isl29125
+        from micropython_isl29125 import isl29125
 
     Once this is done you can define your `machine.I2C` object and define your sensor object
 
