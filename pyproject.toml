@@ -21,12 +21,10 @@ urls = {Homepage = "https://github.com/jposada202020/MicroPython_ISL29125"}
 keywords = [
     "sensor",
     "micropython",
-    "isl29125",
     "color",
     "sensor",
     "intersil",
     "RGB",
-    "mciropython",
     "isl29125",
 ]
 license = {text = "MIT"}
