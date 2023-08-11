@@ -8,7 +8,7 @@
 MicroPython Driver for the Intersil ISL29125 Color Sensor
 
 
-* Author(s): Jose D. Montoya
+* Author: Jose D. Montoya
 
 
 """
@@ -143,25 +143,21 @@ class ISL29125:
     @property
     def green(self):
         """Green property"""
-
         return self._green
 
     @property
     def red(self):
         """red property"""
-
         return self._red
 
     @property
     def blue(self):
         """blue property"""
-
         return self._blue
 
     @property
     def colors(self):
         """colors property"""
-
         return self._red, self._green, self._blue
 
     @property
@@ -199,7 +195,6 @@ class ISL29125:
 
             i2c = board.I2C()
             isl = isl29125.ISL29125(i2c)
-
 
             isl.operation_mode = isl29125.BLUE_ONLY
 
@@ -249,7 +244,6 @@ class ISL29125:
             i2c = board.I2C()
             isl = isl29125.ISL29125(i2c)
 
-
             isl.operation_mode = isl29125.LUX_375
 
 
@@ -266,7 +260,7 @@ class ISL29125:
 
     @property
     def adc_resolution(self) -> str:
-        """ADC’s resolution and the number of clock cycles per conversion is
+        """ADC's resolution and the number of clock cycles per conversion is
         determined by this bit. Changing the resolution of the ADC, changes the
         number of clock cycles of the ADC which in turn changes the integration time.
         Integration time is the period the ADC samples the photodiode current signal
@@ -289,7 +283,6 @@ class ISL29125:
 
             i2c = board.I2C()
             isl = isl29125.ISL29125(i2c)
-
 
             isl.operation_mode = isl29125.RES_12BITS
 
@@ -327,7 +320,6 @@ class ISL29125:
             i2c = board.I2C()
             isl = isl29125.ISL29125(i2c)
 
-
             isl.ir_compensation = isl29125.IR_ON
 
 
@@ -364,12 +356,10 @@ class ISL29125:
             i2c = board.I2C()
             isl = isl29125.ISL29125(i2c)
 
-
             isl._ir_compensation_value = 48
 
 
         """
-
         return self._ir_compensation_value
 
     @ir_compensation_value.setter
@@ -404,7 +394,6 @@ class ISL29125:
             i2c = board.I2C()
             isl = isl29125.ISL29125(i2c)
 
-
             isl.interrupt_threshold = isl29125.BLUE_INTERRUPT
 
 
@@ -428,7 +417,6 @@ class ISL29125:
         status bit (HIGH).
 
         """
-
         return self._high_threshold
 
     @high_threshold.setter
@@ -474,7 +462,6 @@ class ISL29125:
             i2c = board.I2C()
             isl = isl29125.ISL29125(i2c)
 
-
             print(isl.interrupt_triggered)
 
 
@@ -512,7 +499,6 @@ class ISL29125:
             i2c = board.I2C()
             isl = isl29125.ISL29125(i2c)
 
-
             isl.persistent_control = isl29125.IC4
 
 
@@ -529,5 +515,4 @@ class ISL29125:
 
     def clear_register_flag(self):
         """Clears the flag register performing a read action"""
-
         return self._flag_register
